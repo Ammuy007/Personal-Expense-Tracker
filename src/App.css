@@ -1,0 +1,122 @@
+/* Reset-ish */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f7f9;
+}
+
+/* Page wrapper */
+.app {
+  min-height: 100vh;
+  display: flex;
+  padding:20px;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  width:100%;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background: #22c55e;
+  color: white;
+  font-size: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.header p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Summary Cards */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* Main Section */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+}
+
+/* Expense Form */
+.expense-form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 250px;
+}
+
+/* Expense List */
+.expense-list {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-header select {
+  padding: 6px 10px;
+}
+
+.empty-state {
+  flex: 1;
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
