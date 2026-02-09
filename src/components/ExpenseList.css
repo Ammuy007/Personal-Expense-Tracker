@@ -59,22 +59,53 @@
 .name {
   font-weight: 600;
   margin: 0;
+  
 }
 
 .meta {
   display: flex;
-  gap: 18px;
+  gap: 30px;
   font-size: 12px;
+  
   color: #6b7280;
 }
 
 .badge {
-  padding: 4px 8px;
+  
   border-radius: 999px;
-  background: #f3f4f6;
+  background:none;
 }
 
 .amount {
   font-weight: 600;
   font-size: 16px;
+  padding: 12px 18px; 
+}
+.right {
+  display: flex;
+  align-items: center;
+  
+  gap: 12px;
+}
+
+.delete-btn {
+  background: red;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+}
+.edit-btn {
+  background: #22c55e;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: rgb(230, 1, 1);
+}
+.edit-btn:hover{
+    background:#16a34a;
 }

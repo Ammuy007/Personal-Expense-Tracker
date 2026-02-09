@@ -1,6 +1,6 @@
 import "./ExpenseList.css";
 
-function ExpenseList({ expenses, selectedCategory, onCategoryChange }) {
+function ExpenseList({ expenses, selectedCategory, onCategoryChange, onDeleteExpense,onEditExpense}) {
   const filteredExpenses =
     selectedCategory === "All"
       ? expenses
@@ -44,9 +44,20 @@ function ExpenseList({ expenses, selectedCategory, onCategoryChange }) {
                 </div>
               </div>
 
-              <div className="amount">
-                ₹{expense.amount.toFixed(2)}
-              </div>
+              <div className="right">
+                <span className="amount">₹{expense.amount.toFixed(2)}</span>
+
+                <button
+                className="delete-btn"
+                onClick={() => onDeleteExpense(expense.id)}
+  >
+                Delete
+                </button>
+                <button className="edit-btn" onClick={() => onEditExpense(expense)}>
+                    Edit
+                </button>
+            </div>
+
             </li>
           ))}
         </ul>
